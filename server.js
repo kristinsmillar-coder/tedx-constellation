@@ -32,6 +32,11 @@ function saveDreams(data) {
     fs.writeFileSync(DATA_FILE, JSON.stringify(data, null, 2));
 }
 
+// Keep-alive endpoint (prevents Render free tier from sleeping)
+app.get('/api/ping', (req, res) => {
+    res.json({ status: 'alive', timestamp: Date.now() });
+});
+
 // API: Get all dreams
 app.get('/api/dreams', (req, res) => {
     const data = loadDreams();

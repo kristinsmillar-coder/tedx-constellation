@@ -1078,4 +1078,9 @@ class Starfield {
 
 window.addEventListener('DOMContentLoaded', () => {
     new Starfield(document.getElementById('starfield'));
+
+    // Keep-alive ping every 4 minutes to prevent Render from sleeping
+    setInterval(() => {
+        fetch('/api/ping').catch(() => {});
+    }, 4 * 60 * 1000);
 });
