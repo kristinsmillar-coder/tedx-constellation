@@ -17,6 +17,11 @@ const DATA_FILE = path.join(PROJECT_DIR, 'data', 'dreams.json');
 app.use(express.json());
 app.use(express.static(path.join(PROJECT_DIR, 'public')));
 
+// Root redirect
+app.get('/', (req, res) => {
+    res.redirect('/display.html');
+});
+
 // Load dreams from file
 function loadDreams() {
     try {
