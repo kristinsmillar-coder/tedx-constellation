@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Share Your Dream - Ad Astra</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/submit.css">
+</head>
+<body>
+    <canvas id="bg-canvas"></canvas>
+
+    <div class="container">
+        <div class="card">
+            <div class="card-glow"></div>
+
+            <header>
+                <div class="logo-star">&#10022;</div>
+                <h1>Ad Astra</h1>
+                <p class="tagline">Add your star to our constellation</p>
+            </header>
+
+            <form id="dream-form">
+                <div class="form-group">
+                    <label for="name">Your Name</label>
+                    <div class="input-wrap">
+                        <input
+                            type="text"
+                            id="name"
+                            name="name"
+                            placeholder="Enter your name"
+                            maxlength="50"
+                            required
+                            autocomplete="off"
+                        >
+                        <div class="input-glow"></div>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="dream">Your Dream or Wish</label>
+                    <div class="input-wrap">
+                        <textarea
+                            id="dream"
+                            name="dream"
+                            placeholder="What do you aspire to achieve? What's your wish for the world?"
+                            maxlength="150"
+                            required
+                        ></textarea>
+                        <div class="input-glow"></div>
+                    </div>
+                    <div class="char-count"><span id="char-count">0</span>/150</div>
+                </div>
+
+                <button type="submit" id="submit-btn">
+                    <span class="btn-text">Launch Your Star</span>
+                    <span class="btn-icon">&#10022;</span>
+                    <span class="btn-loading">
+                        <span class="spinner"></span>
+                    </span>
+                    <div class="btn-shimmer"></div>
+                </button>
+            </form>
+
+            <div id="success-message" class="hidden">
+                <canvas id="success-canvas"></canvas>
+                <div class="success-star">&#10022;</div>
+                <h2>Your star is now shining!</h2>
+                <p>Look at the display to see your dream join the constellation.</p>
+                <button id="submit-another" class="secondary-btn">Add Another Dream</button>
+            </div>
+
+            <footer>
+                <div class="footer-line"></div>
+                <p>TEDx <span>Ad Astra</span></p>
+            </footer>
+        </div>
+    </div>
+
+    <script src="js/submit.js"></script>
+</body>
+</html>

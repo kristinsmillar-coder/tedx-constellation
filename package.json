@@ -1,0 +1,13 @@
+{
+  "name": "tedx-constellation",
+  "version": "1.0.0",
+  "description": "TEDx Ad Astra Interactive Constellation Display",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "express": "^4.18.2",
+    "ws": "^8.14.2"
+  }
+}
